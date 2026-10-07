@@ -33,6 +33,7 @@ curl "https://nexwall.kodnextech.com/api/developer/v1/wallpapers?sort=popular&pe
 
 ```bash
 npm install nexwall      # JavaScript / TypeScript (Node 18+, Bun, Deno, Workers)
+pip install nexwall      # Python 3.9+ (client + CLI)
 ```
 
 ```js
@@ -41,7 +42,7 @@ const nexwall = new NexWall({ apiKey: process.env.NEXWALL_API_KEY });
 const { data } = await nexwall.wallpapers({ sort: "popular", perPage: 20 });
 ```
 
-Package: [npmjs.com/package/nexwall](https://www.npmjs.com/package/nexwall) · Source: [nexwall-js](https://github.com/kodnextechnologies/nexwall-js) · Python client: [nexwall-python](https://github.com/kodnextechnologies/nexwall-python)
+Package: [npmjs.com/package/nexwall](https://www.npmjs.com/package/nexwall) · Source: [nexwall-js](https://github.com/kodnextechnologies/nexwall-js) · Python: [pypi.org/project/nexwall](https://pypi.org/project/nexwall/) · [nexwall-python](https://github.com/kodnextechnologies/nexwall-python)
 ## Endpoints
 
 | Method | Endpoint | What it returns |
