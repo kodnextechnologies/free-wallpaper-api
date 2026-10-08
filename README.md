@@ -23,6 +23,14 @@ NexWall is built for exactly this use case: portrait 9:16 wallpapers, wallpaper 
 
 ## Quick start
 
+Try it without a key (up to 10 free wallpapers, limited per IP):
+
+```bash
+curl "https://nexwall.kodnextech.com/api/developer/v1/demo/wallpapers?sort=random&per_page=5"
+```
+
+With your free API key:
+
 ```bash
 curl "https://nexwall.kodnextech.com/api/developer/v1/wallpapers?sort=popular&per_page=20" \
   -H "Authorization: Bearer YOUR_API_KEY" \
@@ -47,6 +55,7 @@ Package: [npmjs.com/package/nexwall](https://www.npmjs.com/package/nexwall) · S
 
 | Method | Endpoint | What it returns |
 |---|---|---|
+| `GET` | `/demo/wallpapers` | Up to 10 free wallpapers, **no key needed** (limited per IP) |
 | `GET` | `/categories` | Categories available on your plan |
 | `GET` | `/wallpapers` | Paginated wallpaper feed (filters below) |
 | `GET` | `/categories/{categoryId}/wallpapers` | Wallpapers in one category |
@@ -221,7 +230,7 @@ Yes. Free is for building and testing; monetized apps (AdMob, subscriptions) nee
 Yes, looping MP4 live wallpapers via `type=live` on the Ultra plan.
 
 **Is there an API without a key?**
-Every request needs a free key, so quotas stay fair. The [sandbox](https://nexwall.kodnextech.com/wallpaper-api/sandbox) lets you try requests in the browser first.
+Yes, for trying it out: `GET /demo/wallpapers` returns up to 10 free wallpapers with no key (10 requests/minute, 30/day per IP). For pagination and all other endpoints, use a free key. The [sandbox](https://nexwall.kodnextech.com/wallpaper-api/sandbox) also lets you try requests in the browser.
 
 ## License
 
